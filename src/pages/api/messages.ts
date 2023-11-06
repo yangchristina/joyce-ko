@@ -11,3 +11,7 @@ export default function handler(
 ) {
   res.status(200).json({ name: 'John Doe' })
 }
+
+// const imageDirectory = path.join(process.cwd(), '/public/midj');
+// const imageFilenames = await fs.readdir(imageDirectory)
+// console.log(imageFilenames)
