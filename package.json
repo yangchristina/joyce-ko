@@ -9,14 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@planda/design-system": "^1.0.110",
+    "lodash": "^4.17.21",
+    "next": "14.0.1",
+    "next-transpile-modules": "^10.0.1",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.0.1"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/lodash": "^4.14.200",
     "@types/node": "^20",
     "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "@types/react-dom": "^18",
+    "typescript": "^5"
   }
 }
