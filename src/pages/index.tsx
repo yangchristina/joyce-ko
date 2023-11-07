@@ -94,8 +94,16 @@ const MESSAGES = [
     from: "Grace"
   },
   {
-    text: "It has been such a blessing to live at Carey and grow in our friendship throughout the years. You may not realize it, but you have grown so so much since first year in so many beautiful ways. It has been so amazing to see you flourish into the caring person you are today. I could not imagine Carey without you. Your integrity and how you live out your beliefs has been so inspiring to me, and you have pushed me in so many ways throughout the years. Thank you for embracing my craziness, your tight loving hugs, and thoughtful conversations.\n\nMy prayer for you in this next year is for you to embrace the life God has in store for you. I pray that this year will be marked by a peace beyond your understanding, that you will continue to pursue Him and trust in His amazing will and let Him use the gifts and passions He has given you to do His good.\n\nI pray that you will get out of your head and live in the present moment that God is blessing you with. That you will address your anxieties and give them over to God so you can instead be filled with thankfulness for the little things in life, the daily moments. I know God is a healer and that He desires so so deeply to work in us. And I believe He will.\n\nI hope you have an amazing day, eat some good cake, and frolic in the rain :))\n\nI love you Joyce!!! And HAPPY BIRTHDAY!!!!! I'm so excited to see what God has in store for you in this next year!",
-    from: "Sarah"
+    text: "It has been such a blessing to live at Carey and grow in our friendship throughout the years. You may not realize it, but you have grown so so much since first year in so many beautiful ways. It has been so amazing to see you flourish into the caring person you are today. I could not imagine Carey without you. Your integrity and how you live out your beliefs has been so inspiring to me, and you have pushed me in so many ways throughout the years. Thank you for embracing my craziness, your tight loving hugs, and thoughtful conversations.",
+    from: "Sarah pt.1"
+  },
+  {
+    text: "My prayer for you in this next year is for you to embrace the life God has in store for you. I pray that this year will be marked by a peace beyond your understanding, that you will continue to pursue Him and trust in His amazing will and let Him use the gifts and passions He has given you to do His good.",
+    from: "Sarah pt.2"
+  },
+  {
+    text: "I pray that you will get out of your head and live in the present moment that God is blessing you with. That you will address your anxieties and give them over to God so you can instead be filled with thankfulness for the little things in life, the daily moments. I know God is a healer and that He desires so so deeply to work in us. And I believe He will.\n\nI hope you have an amazing day, eat some good cake, and frolic in the rain :))\n\nI love you Joyce!!! And HAPPY BIRTHDAY!!!!! I'm so excited to see what God has in store for you in this next year!",
+    from: "Sarah pt.3"
   },
   {
     text: "Happy birthday to the kindest and sweetest girl!! Have the most amazing year ever ❤️ Praying that you’ll always have faith that will move mountains whenever life may get uncertain - God definitely has so much in store for you in this next chapter!!\n\nMiss you tons but I’ll see you very soon :)",
@@ -112,6 +120,14 @@ const MESSAGES = [
   {
     text: "Joyce! You’re such a blessing to everyone around you and I love how genuine and honest you are all the time. I hope you have the best time being 20!!",
     from: "Thomas"
+  },
+  {
+    text: "I am so, so thankful for you :) you are such a dear, sweet friend to me and to so many others... you're someone whose a compassionate heart and gentle wisdom I love and admire very much. I love your sense of humour, your dedication to growing in your faith, and how eager you are to learn and try new things. And I can't tell you how much of an encouragement you've been to me this school year alone, in your counsel and comfort, and by example (in the way you live and think and serve God).",
+    from: "Jasyln pt.1"
+  },
+  {
+    text: "You are so very loved, not for what you do, but for who you are, Joycie!! May you find rest in God's unshakeable peace every day, and in the knowledge that you are His beloved daughter.\n\nKnowing you has made me a kinder and braver person, and simply being in the same room with you is a huge source of joy and delight for me. I hope you have a wonderful twentieth year, beloved!! I am praying for you and love you so much! God bless you!!"
+    , from: "Jaslyn pt.2"
   }
 ]
 
@@ -150,7 +166,7 @@ export default function Home() {
   const photos2 = photos.slice(split)
 
   const messages = MESSAGES.map((message, i) => {
-    return <CardFlip color={COLORS[i%(COLORS.length)]} key={message.text} front={message.text} back={message.from} />
+    return <CardFlip color={COLORS[i % (COLORS.length)]} key={message.text} front={message.text} back={message.from} />
   })
 
   const verses = VERSES.map((message, i) => {
@@ -171,7 +187,7 @@ export default function Home() {
       <Page>
         <Header>
           {isExploding && <ConfettiExplosion {...confettiProps} />}
-          <InnerHeader onClick={()=>setIsExploding(true)} >
+          <InnerHeader onClick={() => setIsExploding(true)} >
             <h2>Happy Birthday</h2>
             <h1>Joyce 💕</h1>
             <sub>click on a card to see who it's from, or click this to see confetti</sub>
