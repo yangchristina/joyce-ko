@@ -10,6 +10,8 @@ import CardFlip from "@/components/CardFlip";
 import ConfettiExplosion from "react-confetti-explosion";
 import { useState } from "react";
 
+
+const GRID_HEIGHT = "350px"
 const Page = styled('div', {
   minHeight: "100vh",
   margin: "0",
@@ -18,7 +20,7 @@ const Page = styled('div', {
   display: "grid",
   position: "relative",
   gridTemplateColumns: `1fr 3fr 1fr`,
-  gridTemplateRows: "300px 5fr",
+  gridTemplateRows: GRID_HEIGHT+" 5fr",
   gridTemplateAreas: `
     ". header ."
     ". grid ."
@@ -47,8 +49,8 @@ const Grid = styled('div', {
   gap: 25,
   position: "relative",
   display: "grid",
-  gridTemplateColumns: `repeat(auto-fit, minmax(300px, 1fr))`,
-  gridAutoRows: "300px",
+  gridTemplateColumns: `repeat(auto-fit, minmax(${GRID_HEIGHT}, 1fr))`,
+  gridAutoRows: GRID_HEIGHT,
   gridArea: "grid",
   minWidth: "0",
   minHeight: "0",
@@ -168,21 +170,16 @@ const VERSES = [
   "May the Lord bless you and protect you; may the Lord make his face shine on you and be gracious to you; may the Lord look with favor on you and give you peace.\nNumbers 6:24-26 💕",
   "\"May the Lord make his face shine on you and be gracious to you;\"\nNumbers 6:25",
   "[Zoe's] favourite verse when I’m feeling discouraged: Romans 5:3",
-  "I lift up my eyes to the mountains—\nwhere does my help come from?\nMy help comes from the Lord,\nthe Maker of heaven and earth. Psalm 121:1-2",
-  "He will not let your foot slip—\nhe who watches over you will not slumber; indeed, he who watches over Israel\nwill neither slumber nor sleep. Psalm 121:3-4",
-  "The Lord watches over you—\nthe Lord is your shade at your right hand;\nthe sun will not harm you by day,\nnor the moon by night. Psalm 121:5-6",
-  "The Lord will keep you from all harm—\nhe will watch over your life;\nthe Lord will watch over your coming and going\nboth now and forevermore. Psalm 121:7-8"
+  "I lift up my eyes to the mountains—\nwhere does my help come from?\nMy help comes from the Lord,\nthe Maker of heaven and earth.\nPsalm 121:1-2",
+  "He will not let your foot slip—\nhe who watches over you will not slumber; indeed, he who watches over Israel\nwill neither slumber nor sleep.\nPsalm 121:3-4",
+  "The Lord watches over you—\nthe Lord is your shade at your right hand;\nthe sun will not harm you by day,\nnor the moon by night.\nPsalm 121:5-6",
+  "The Lord will keep you from all harm—\nhe will watch over your life;\nthe Lord will watch over your coming and going\nboth now and forevermore.\nPsalm 121:7-8"
 ]
 const COLORS = ['#009DB10D', '#0099000A', '#CC33000A', '#9D8A000D', '#AA550009', '#00B18A0D',]
 
-//
-
-// const photoPaths = ['joyce-zoe.png']
 export default function Home() {
   const { data } = useSWR('/api/photos', fetcher)
   const photoPaths = data?.imageFilenames || []
-
-
 
   const photos = photoPaths?.map((photo, i) => {
     return <div key={photo} style={{
@@ -198,9 +195,6 @@ export default function Home() {
       /></div>
   })
 
-  const split = Math.floor(photos.length / 2)
-  const photos1 = photos.slice(0, split)
-  const photos2 = photos.slice(split)
 
   const messages = MESSAGES.map((message, i) => {
     return <CardFlip color={COLORS[i % (COLORS.length)]} key={message.text} front={message.text} back={message.from} />
@@ -209,6 +203,11 @@ export default function Home() {
   const verses = VERSES.map((message, i) => {
     return <GridCellText key={message}>{message}</GridCellText>
   })
+
+  const split = Math.min(messages.length, verses.length)
+  // Math.floor(photos.length / 2)
+  const photos1 = photos.slice(0, split)
+  const photos2 = photos.slice(split)
 
   const braided = braidArrays(photos1, messages, photos2, verses)
   const [isExploding, setIsExploding] = useState(true);
