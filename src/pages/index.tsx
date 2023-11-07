@@ -100,6 +100,18 @@ const MESSAGES = [
   {
     text: "Happy birthday to the kindest and sweetest girl!! Have the most amazing year ever ❤️ Praying that you’ll always have faith that will move mountains whenever life may get uncertain - God definitely has so much in store for you in this next chapter!!\n\nMiss you tons but I’ll see you very soon :)",
     from: "Ivana"
+  },
+  {
+    text: "Happy Birthday Joyce! Wishing you many more crazy, fun, and maybe slightly dangerous adventure in the future<3",
+    from: "Julia & Jayden"
+  },
+  {
+    text: "Happy Birthday Joyce! It has been a wholesome time with you and at Carey where you kindly lead us. May God bless you, lead you, and comfort you on every step you take!",
+    from: "Joanna 🥰"
+  },
+  {
+    text: "Joyce! You’re such a blessing to everyone around you and I love how genuine and honest you are all the time. I hope you have the best time being 20!!",
+    from: "Thomas"
   }
 ]
 
@@ -162,7 +174,7 @@ export default function Home() {
           <InnerHeader onClick={()=>setIsExploding(true)} >
             <h2>Happy Birthday</h2>
             <h1>Joyce 💕</h1>
-            <sub>Instructions: this is a guess who game</sub>
+            <sub>click on a card to see who it's from, or click this to see confetti</sub>
           </InnerHeader>
           {isExploding && <ConfettiExplosion {...confettiProps} />}
         </Header>
