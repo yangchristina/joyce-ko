@@ -128,6 +128,10 @@ const MESSAGES = [
   {
     text: "You are so very loved, not for what you do, but for who you are, Joycie!! May you find rest in God's unshakeable peace every day, and in the knowledge that you are His beloved daughter.\n\nKnowing you has made me a kinder and braver person, and simply being in the same room with you is a huge source of joy and delight for me. I hope you have a wonderful twentieth year, beloved!! I am praying for you and love you so much! God bless you!!"
     , from: "Jaslyn pt.2"
+  },
+  {
+    text: "Happy birthday! Thank you for the kindness and laughter that you bring to Carey. You inspire me with your heart for God and desire to follow His will. I hope that you had the best day!",
+    from: "Caris"
   }
 ]
 
