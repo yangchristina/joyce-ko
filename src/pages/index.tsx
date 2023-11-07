@@ -132,6 +132,35 @@ const MESSAGES = [
   {
     text: "Happy birthday! Thank you for the kindness and laughter that you bring to Carey. You inspire me with your heart for God and desire to follow His will. I hope that you had the best day!",
     from: "Caris"
+  },
+  {
+    text: "Happy birthday Joyce. Love you very much! I'm so thankful that you are my next door neighbour. You bring so much joy to my life!",
+    from: "Jaima"
+  },
+  {
+    text: 'Happy birthday joyce!! I hope you had a grea year ad Im so thankful to have met you this year.',
+    from: "Amalie"
+  }, {
+    text: "Happy birthday joyce!!! Super blessed to have you around at Carey! May God continue to bless you in your studies and continue to fill you with wisdom and joy!",
+    from: "Josh W.",
+  },
+  {
+    text: "Happy birthday Joyce!!! Hope you have an awesome day.",
+    from: "Ethan"
+  }, {
+    text: "Happy birthday Joyce!! Have a really really great day!!!!!!!!!!",
+    from: "Connor"
+  },
+  {
+    text: "Happy birthday Joyce!! Hope you have an amazing good day.",
+    from: "Xio"
+  }, {
+    text: "hbd u the goat",
+    from: "Ryan"
+  },
+  {
+    text: "Happy birthday Joyce. You've been super welcoming adn super sweet. You have a very kind energy and I hope that God continues to work through you and show you that same kindness back.",
+    from: "Abbie"
   }
 ]
 
