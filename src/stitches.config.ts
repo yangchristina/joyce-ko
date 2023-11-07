@@ -17,6 +17,6 @@ export const {
 
 // #endregion
 
-const GlobalStylesApply = globalCss(globalStyles)
+const GlobalStylesApply = globalCss(merge(globalStyles, {body: { backgroundColor: '#FDFDFC'}}))
 //we can declare the styles here or in pages/_app.tsx
 GlobalStylesApply();

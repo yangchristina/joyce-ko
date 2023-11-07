@@ -1,19 +1,18 @@
 import { GridCellText } from '@/styles'
 import React, { ReactNode, useState } from 'react'
 import ReactCardFlip from 'react-card-flip'
-import ConfettiExplosion from 'react-confetti-explosion'
 
-const CardFlip = ({ front, back }: { front: ReactNode, back: ReactNode }) => {
+const CardFlip = ({ front, back, color }: { front: ReactNode, back: ReactNode, color: string }) => {
     const [isFlipped, setIsFlipped] = useState(false)
 
     return (
         <>
             <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-                <GridCellText border onClick={() => {setIsFlipped(true);}} >
+                <GridCellText style={{background: color}} border onClick={() => {setIsFlipped(true);}} >
                     {front}
                 </GridCellText>
 
-                <GridCellText border onClick={() => setIsFlipped(false)} >
+                <GridCellText style={{background: color}} border onClick={() => setIsFlipped(false)} >
                     {back}
                 </GridCellText>
             </ReactCardFlip>

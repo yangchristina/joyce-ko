@@ -5,8 +5,8 @@ import Head from 'next/head'
 export default function App({ Component, pageProps }: AppProps) {
   return <>
     <Head>
-      <title>JK</title>
-      <link rel="icon" href="/favicon.ico" />
+      <title>Joyce Ko</title>
+      <link rel="icon" href="/joyce-logo.png" />
     </Head>
     <DesignSystemProvider defaultTheme={'blueberry'} >
       <Component {...pageProps} />

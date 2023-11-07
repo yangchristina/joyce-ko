@@ -108,11 +108,16 @@ const VERSES = [
   "\"May the Lord make his face shine on you and be gracious to you;\"\nNumbers 6:25",
   "[Zoe's] favourite verse when I’m feeling discouraged: Romans 5:3"
 ]
+const COLORS = ['#009DB10D', '#0099000A', '#CC33000A', '#9D8A000D', '#AA550009', '#00B18A0D',]
+
+//
 
 // const photoPaths = ['joyce-zoe.png']
 export default function Home() {
-  const { data, error } = useSWR('/api/photos', fetcher)
+  const { data } = useSWR('/api/photos', fetcher)
   const photoPaths = data?.imageFilenames || []
+
+
 
   const photos = photoPaths?.map((photo, i) => {
     return <div key={photo} style={{
@@ -133,7 +138,7 @@ export default function Home() {
   const photos2 = photos.slice(split)
 
   const messages = MESSAGES.map((message, i) => {
-    return <CardFlip key={message.text} front={message.text} back={message.from} />
+    return <CardFlip color={COLORS[i%(COLORS.length)]} key={message.text} front={message.text} back={message.from} />
   })
 
   const verses = VERSES.map((message, i) => {
@@ -156,7 +161,7 @@ export default function Home() {
           {isExploding && <ConfettiExplosion {...confettiProps} />}
           <InnerHeader onClick={()=>setIsExploding(true)} >
             <h2>Happy Birthday</h2>
-            <h1>Joyce Ko</h1>
+            <h1>Joyce 💕</h1>
             <sub>Instructions: this is a guess who game</sub>
           </InnerHeader>
           {isExploding && <ConfettiExplosion {...confettiProps} />}
