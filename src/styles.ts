@@ -8,6 +8,7 @@ export const GridCellText = styled('p', {
     alignItems: 'center',
     justifyContent: 'center',
     boxSizing: 'border-box',
+    overflow: 'scroll',
     variants: {
         border: {
             true: {
