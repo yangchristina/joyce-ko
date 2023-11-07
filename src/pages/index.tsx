@@ -104,8 +104,12 @@ const MESSAGES = [
     from: "Sarah pt.2"
   },
   {
-    text: "I pray that you will get out of your head and live in the present moment that God is blessing you with. That you will address your anxieties and give them over to God so you can instead be filled with thankfulness for the little things in life, the daily moments. I know God is a healer and that He desires so so deeply to work in us. And I believe He will.\n\nI hope you have an amazing day, eat some good cake, and frolic in the rain :))\n\nI love you Joyce!!! And HAPPY BIRTHDAY!!!!! I'm so excited to see what God has in store for you in this next year!",
+    text: "I pray that you will get out of your head and live in the present moment that God is blessing you with. That you will address your anxieties and give them over to God so you can instead be filled with thankfulness for the little things in life, the daily moments. I know God is a healer and that He desires so so deeply to work in us. And I believe He will.",
     from: "Sarah pt.3"
+  },
+  {
+    text: "I hope you have an amazing day, eat some good cake, and frolic in the rain :))\n\nI love you Joyce!!! And HAPPY BIRTHDAY!!!!! I'm so excited to see what God has in store for you in this next year!",
+    from: "Sarah pt.4"
   },
   {
     text: "Happy birthday to the kindest and sweetest girl!! Have the most amazing year ever ❤️ Praying that you’ll always have faith that will move mountains whenever life may get uncertain - God definitely has so much in store for you in this next chapter!!\n\nMiss you tons but I’ll see you very soon :)",
