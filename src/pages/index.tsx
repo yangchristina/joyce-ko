@@ -11,7 +11,7 @@ import ConfettiExplosion from "react-confetti-explosion";
 import { useState } from "react";
 
 
-const GRID_HEIGHT = "350px"
+const GRID_HEIGHT = "250px"
 const Page = styled('div', {
   minHeight: "100vh",
   margin: "0",
